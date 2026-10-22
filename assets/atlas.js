@@ -167,7 +167,7 @@
       if (!THREE.has(id) || frame || failed || dead || !active) return;
       frame = document.createElement('iframe');
       frame.className = 'atlas-scene'; frame.title = canvas.getAttribute('aria-label');
-      frame.src = 'assets/atlas/scene.html?v=337&id=' + id;
+      frame.src = 'assets/atlas/scene.html?v=338&id=' + id;
       controller.frame = frame; view.appendChild(frame);
       const loadingFrame = frame;
       listen(frame, 'load', () => {

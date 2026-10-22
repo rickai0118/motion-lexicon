@@ -1179,7 +1179,7 @@
       copy[0] + '\n\n' +
       '**' + (en ? 'Say it as' : '说出来') + ':** ' + copy[2] + '\n' +
       (code ? '\n```html\n' + code + '\n```\n' : '') +
-      (t.alias && t.alias.length ? '\n**也叫：** ' + t.alias.join('、') + '\n' : '');
+      (t.alias && t.alias.length ? (en ? '\n**Also called:** ' + t.alias.join(', ') : '\n**也叫：** ' + t.alias.join('、')) + '\n' : '');
   }
   /* 剪贴板统一入口：异步 API 被拒（权限 / 失焦）时降级 execCommand，
      都失败就回调 fail —— 不能像以前那样没写进去也提示「已复制」 */
